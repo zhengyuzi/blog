@@ -20,6 +20,7 @@ export default defineConfig({
     },
     // nav: [],
     socialLinks: [
+      { icon: 'npm', link: 'https://www.npmjs.com/~zhengyuzi' },
       { icon: 'github', link: 'https://github.com/zhengyuzi' },
     ],
     search: {
