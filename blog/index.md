@@ -9,14 +9,19 @@ lastUpdated: false
 <script setup>
 const websites = [
   {
+    name: 'MDN',
+    url: 'https://developer.mozilla.org/zh-CN/',
+    icon: 'https://developer.mozilla.org/apple-touch-icon.6803c6f0.png'
+  },
+  {
     name: 'Vite',
     url: 'https://cn.vitejs.dev/',
     icon: 'https://cn.vitejs.dev/logo.svg',
   },
   {
     name: 'Vue',
-    url: 'https://cn.vuejs.org/',
-    icon: 'https://cn.vuejs.org/logo.svg',
+    url: 'https://vuejs.org/',
+    icon: 'https://vuejs.org/logo.svg',
   },
   {
     name: 'React',
@@ -82,11 +87,25 @@ const websites = [
 </script>
 
 <div style="min-height: 60vh; display: flex; flex-direction: column; align-items: center; justify-content: center;">
-  <p align="center" style="font-size: 58px; color: var(--vp-home-hero-name-color); font-weight: 700;">Yu's blog</p>
-  <p style="color: var(--vp-c-text-2); font-weight: 500; font-size: 22px;">不念过往 不畏将来 不乱于心 不困于情</p>
+  <p
+    align="center"
+    style="font-size: 58px; color: var(--vp-home-hero-name-color); font-weight: 700;"
+  >
+    Yu's blog
+  </p>
+  <p style="color: var(--vp-c-text-2); font-weight: 500; font-size: 22px;">
+    不念过往 不畏将来 不乱于心 不困于情
+  </p>
   <div style="width: 100%; margin: 20px 0;">
     <div style="width: 100%;display: flex;flex-wrap: wrap;">
-      <a v-for="website in websites" :key="website.name" :href="website.url" style="display: flex;flex-direction: column;align-items: center;width: 110px;margin-bottom: 20px;">
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        v-for="website in websites"
+        :key="website.name"
+        :href="website.url"
+        style="display: flex;flex-direction: column;align-items: center;width: 110px;margin-bottom: 20px;"
+      >
         <div style="width: 48px; height: 48px; border-radius: 8px; overflow: hidden; border: 1px solid rgba(0, 0, 0, 0.05); background-color: rgb(248, 248, 248);">
           <img width="48" height="48" :src="website.icon" />
         </div>
